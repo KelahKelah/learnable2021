@@ -1,2 +1,2 @@
-export * from './home/components/'
+export * from './home/home'
 export * from './applicationClosed/applicationClosed'

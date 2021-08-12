@@ -21,7 +21,7 @@ const Approute  = () => {
         <Router>
             <Switch>
                 <LayoutRoute 
-                    path={"/home"}
+                    path={"/"}
                     exact={true}
                     Component={ Home }
                 />
