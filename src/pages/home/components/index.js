@@ -1,0 +1,5 @@
+export * from './assessment'
+export * from './education'
+export * from './personalData'
+export * from './socialMedia'
+export * from './thought'
