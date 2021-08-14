@@ -1,0 +1,12 @@
+.thoughtsContainer {
+    padding: 0 50px 50px 50px;
+}
+
+.thoughtLabel {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.mediaEntry {
+    margin-bottom: 20px;
+}
