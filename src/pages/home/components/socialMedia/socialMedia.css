@@ -1,0 +1,13 @@
+.socialContainer {
+    padding: 0 50px 50px 50px;
+}
+
+.mediaEntry:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.formLabel {
+    font-size: 16px;
+    font-weight: 300;
+    color: #000000;
+}

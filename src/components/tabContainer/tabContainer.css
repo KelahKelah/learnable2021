@@ -1,0 +1,37 @@
+.tabContainer {
+    background-color: #FFFFFF;
+    max-width: 1000px;
+    margin: 50px auto;
+    border: 1px solid #C4C4C4;
+    border-radius: 5px;
+}
+
+.tabContainer li {
+    padding: 10px 0;
+    border-bottom: 6px solid transparent;
+}
+
+.tabContainer li:not(:last-child) {
+    border-right: 0.25px solid #C4C4C4;
+}
+
+.tabContainer li:hover {
+    border-bottom: 6px solid #4066EB;
+}
+
+.tabContainer p {
+    font-size: 10px;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+a {
+    color: #071852;
+    font-size: 16px;
+    font-weight: 900;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: #071852;
+}

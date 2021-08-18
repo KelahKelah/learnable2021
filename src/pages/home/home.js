@@ -6,7 +6,7 @@ import { useLocation  } from 'react-router-dom'
 const Home = () => {
     const location = useLocation()
     const DisplayComponents = () => {
-        switch(location.has) {
+        switch(location.hash) {
             case '#personalData':
                 return <PersonalData />
             case '#education':
@@ -25,7 +25,7 @@ const Home = () => {
     return(
         <>
         <TabContainer 
-                Children={
+                children={
                     <DisplayComponents />
                 }
         />
