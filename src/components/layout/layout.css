@@ -2,4 +2,18 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    overflow-y: scroll;
+}
+
+.layout-wrapper h1 {
+    color: #FFFFFF;
+    font-size: 38px;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: 167px;
+}
+
+h1 span {
+    color: yellow;
 }
