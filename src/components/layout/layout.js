@@ -3,6 +3,10 @@ import "./layout.css";
 import learnableImage from "../images/learnableImage.svg"
 
 const Layout = ({ children }) => {
+  const date = new Date;
+  const year = date.getFullYear().toString()
+  const slicedYear = year.slice(-2)
+
   return (
     <div
       className="layout-wrapper"
@@ -15,7 +19,7 @@ const Layout = ({ children }) => {
       }}
     >
       <h1>
-        learnable <span>20 </span>- application form
+        learnable <span>{slicedYear} </span>- application form
       </h1>
       {children}
     </div>
