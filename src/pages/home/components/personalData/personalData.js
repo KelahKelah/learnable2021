@@ -1,8 +1,15 @@
 import React from "react";
 import { Buttons } from "../../../../components/buttons/buttons";
+import {useHistory} from "react-router-dom";
 import "../personalData/personalData.css";
 
 const PersonalData = () => {
+  const history = useHistory() ;
+
+  const handleNext =()=> {
+    history.push("/#education")
+  }
+
   return (
     <div className="personalData">
       <h2 className="personalDataHeader"> personal data </h2>
@@ -63,8 +70,8 @@ const PersonalData = () => {
         </div>
       </div>
       <div className="dataButtons">
-        <Buttons label="Back" buttonClass="left" class="col-6" />
-        <Buttons label="Right" buttonClass="right" />
+        <div> </div>
+        <Buttons label="Right" buttonClass="right" onClick={()=>handleNext()} />
       </div>
     </div>
   );

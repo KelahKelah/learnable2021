@@ -1,8 +1,15 @@
 import React from "react";
 import { Buttons } from "../../../../components/buttons/buttons";
+import {useHistory} from "react-router-dom";
 import "../assessment/assessment.css";
 
 const Assessment = () => {
+  const history = useHistory() ;
+
+  const handlePrevious = () => {
+    history.push("#socialMedia")
+  }
+  
   return (
     <div className="assessmentContainer">
       <h2 className="personalDataHeader"> assessment </h2>
@@ -72,8 +79,8 @@ const Assessment = () => {
         </label>
       </div>
       <div className="dataButtons">
-        <Buttons label="Back" buttonClass="left" class="col-6" />
-        <Buttons label="Right" buttonClass="right" />
+        <Buttons label="Back" buttonClass="left" class="col-6" onClick={()=>handlePrevious()}  />
+        <div></div>
       </div>
     </div>
   );
