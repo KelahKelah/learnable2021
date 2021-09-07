@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import React  from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import "../tabContainer/tabContainer.css";
 
 const TabContainer = ({ children }) => {
-  const [tabBorder, setTabBorder] = useState(true)
-
+  let location = useLocation()
+  
   const tabHeader = [
     {
       id: 1,
@@ -38,18 +38,14 @@ const TabContainer = ({ children }) => {
     },
   ];
 
-  const tabBorderSetting = () => {
-    setTabBorder(true)
-  }
-
   return (
     <div className="tabContainer">
       <ul className="nav nav-tabs nav-fill">
         {tabHeader.map((item, id) => {
           return (
-            <NavLink to={item.link} className="nav-item" onClick={tabBorderSetting} key={id}>
-              <li className={ tabBorder === true ? "tabContainerBorder" : "" }>
-                <a class="navLink" aria-current="page" href="#">
+            <NavLink to={item.link} className={location.hash === item.link ? "tabContainerBorder nav-item" : "nav-item"} key={id}>
+              <li className="tabContainerBorder navLink" >
+                <a aria-current="page" href="#">
                   {item.header}
                 </a>
                 <p>{item.text}</p>
