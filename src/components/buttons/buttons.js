@@ -7,7 +7,7 @@ export const Buttons = ({ label, onClick, buttonClass, buttonLink }) => {
   return (
     <button
       type="button"
-      className="btn btn-primary directionArrow"
+      className="btn btn-primary col-3 directionArrow"
       onClick={onClick}
     >
       {buttonClass === "right" ? (

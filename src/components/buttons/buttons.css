@@ -3,4 +3,5 @@ color: #FFFFFF;
 font-size: 13px;
 display: flex;
 align-items: center;
+justify-content: space-between;
 }

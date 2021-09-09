@@ -1,8 +1,18 @@
 import React from "react";
 import { Buttons } from "../../../../components/buttons/buttons";
+import {useHistory} from "react-router-dom";
 import "../education/education.css";
 
 const Education = () => {
+  const history = useHistory() ;
+
+  const handleNext = () => {
+    history.push("#thought")
+  }
+  const handlePrevious = () => {
+    history.push("#personalData")
+  }
+  
   return (
     <div className="education">
       <h2 className="personalDataHeader"> educational background </h2>
@@ -229,8 +239,8 @@ const Education = () => {
         </div>
       </div>
       <div className="dataButtons">
-        <Buttons label="Left" buttonClass="left" />
-        <Buttons label="Right" buttonClass="right" />
+        <Buttons label="Left" buttonClass="left" onClick={()=>handlePrevious()}  />
+        <Buttons label="Right" buttonClass="right" onClick={()=>handleNext()}  />
       </div>
     </div>
   );

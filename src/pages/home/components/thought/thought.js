@@ -1,8 +1,18 @@
 import React from "react";
 import { Buttons } from "../../../../components/buttons/buttons";
+import {useHistory} from "react-router-dom";
 import "../thought/thought.css";
 
 const Thought = () => {
+  const history = useHistory() ;
+
+  const handleNext = () => {
+    history.push("#socialMedia")
+  }
+  const handlePrevious = () => {
+    history.push("#education")
+  }
+  
   return (
     <div className="thoughtsContainer">
       <h2 className="personalDataHeader">thoughts</h2>
@@ -74,8 +84,8 @@ const Thought = () => {
         ></textarea>
       </div>
       <div className="dataButtons">
-        <Buttons label="Back" buttonClass="left" class="col-6" />
-        <Buttons label="Right" buttonClass="right" />
+        <Buttons label="Back" buttonClass="left" class="col-6" onClick={()=>handlePrevious()}   />
+        <Buttons label="Right" buttonClass="right" onClick={()=>handleNext()}   />
       </div>
     </div>
   );
